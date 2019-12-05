@@ -1,0 +1,209 @@
+indows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app my-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\248" as it does not contain
+a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_23_34_331Z-debug.log
+Install for [ 'create-react-app@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app my-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\1044" as it does not contain a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_24_43_259Z-debug.log
+Install for [ 'create-react-app@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app my-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\6052" as it does not contain a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_25_19_497Z-debug.log
+Install for [ 'create-react-app@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app my-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\1720" as it does not contain a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_26_02_313Z-debug.log
+Install for [ 'create-react-app@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npx
+
+ERROR: You must supply a command.
+
+Execute binaries from npm packages.
+
+  npx [options] <command>[@version] [command-arg]...
+
+  npx [options] [-p|--package <package>]... <command> [command-arg]...
+
+  npx [options] -c '<command-string>'
+
+  npx --shell-auto-fallback [shell]
+
+
+Options:
+  --package, -p          Package to be installed.                       [string]
+  --cache                Location of the npm cache.                     [string]
+  --always-spawn         Always spawn a child process to execute the command.
+                                                                       [boolean]
+  --no-install           Skip installation if a package is missing.    [boolean]
+  --userconfig           Path to user npmrc.                            [string]
+  --call, -c             Execute string as if inside `npm run-script`.  [string]
+  --shell, -s            Shell to execute the command with, if any.
+                                                       [string] [default: false]
+  --shell-auto-fallback  Generate shell code to use npx as the "command not
+                         found" fallback.
+                                   [string] [choices: "", "bash", "fish", "zsh"]
+  --ignore-existing      Ignores existing binaries in $PATH, or in the local
+                         project. This forces npx to do a temporary install and
+                         use the latest version.                       [boolean]
+  --quiet, -q            Suppress output from npx itself. Subcommands will not
+                         be affected.                                  [boolean]
+  --npm                  npm binary to use for internal operations.
+   [string] [default: "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js"]
+  --node-arg, -n         Extra node argument when calling a node binary.[string]
+  --version, -v          Show version number                           [boolean]
+  --help, -h             Show help                                     [boolean]
+
+For the full documentation, see the manual page for npx(1).
+
+PS C:\Users\JS ITBC\Desktop\react> npx install
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\3100" as it does not contain a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_27_07_667Z-debug.log
+Install for [ 'install@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react>
+PS C:\Users\JS ITBC\Desktop\react> npx install create-react-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\600" as it does not contain
+a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_28_25_044Z-debug.log
+Install for [ 'install@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npm install create-react-app -g
+C:\Users\JS ITBC\AppData\Roaming\npm\create-react-app -> C:\Users\JS ITBC\AppData\Roaming\npm\node_modules\create-react-app\index.js
++ create-react-app@3.2.0
+added 91 packages from 45 contributors in 25.501s
+PS C:\Users\JS ITBC\Desktop\react> create-react-app my-app
+The term 'create-react-app' is not recognized as the name of a cmdlet, function, script file, or
+ operable program. Check the spelling of the name, or if a path was included, verify that the pa
+th is correct and try again.
+At line:1 char:17
++ create-react-app <<<<  my-app
+    + CategoryInfo          : ObjectNotFound: (create-react-app:String) [], CommandNotFoundExce 
+   ption
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\JS ITBC\Desktop\react> create-react-app my-app
+The term 'create-react-app' is not recognized as the name of a cmdlet, function, script file, or
+ operable program. Check the spelling of the name, or if a path was included, verify that the pa
+th is correct and try again.
+At line:1 char:17
++ create-react-app <<<<  my-app
+    + CategoryInfo          : ObjectNotFound: (create-react-app:String) [], CommandNotFoundExce 
+   ption
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\JS ITBC\Desktop\react> npm install create-react-app -g
+C:\Users\JS ITBC\AppData\Roaming\npm\create-react-app -> C:\Users\JS ITBC\AppData\Roaming\npm\node_modules\create-react-app\index.js
++ create-react-app@3.2.0
+updated 1 package in 6.368s
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\4256" as it does not contain a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_33_01_317Z-debug.log
+Install for [ 'create-react-app@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app my-app
+npm ERR! code ENOLOCAL
+npm ERR! Could not install from "ITBC\AppData\Roaming\npm-cache\_npx\5524" as it does not contain a package.json file.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\JS ITBC\AppData\Roaming\npm-cache\_logs\2019-12-03T09_33_08_112Z-debug.log
+Install for [ 'create-react-app@latest' ] failed with code 1
+PS C:\Users\JS ITBC\Desktop\react> npm install create-react-app
+npm WARN saveError ENOENT: no such file or directory, open 'C:\Users\JS ITBC\Desktop\react\package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open 'C:\Users\JS ITBC\Desktop\react\package.json'
+npm WARN react No description
+npm WARN react No repository field.
+npm WARN react No README data
+npm WARN react No license field.
+
++ create-react-app@3.2.0
+added 91 packages from 45 contributors and audited 179 packages in 13.297s
+found 0 vulnerabilities
+
+PS C:\Users\JS ITBC\Desktop\react> npx create-react-app my-app
+
+Creating a new React app in C:\Users\JS ITBC\Desktop\react\my-app.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts...
+
+
+> core-js@2.6.10 postinstall C:\Users\JS ITBC\Desktop\react\my-app\node_modules\babel-runtime\node_modules\core-js
+> node postinstall || echo "ignore"
+
+
+> core-js@3.2.1 postinstall C:\Users\JS ITBC\Desktop\react\my-app\node_modules\core-js
+> node scripts/postinstall || echo "ignore"
+
+
+> core-js-pure@3.4.7 postinstall C:\Users\JS ITBC\Desktop\react\my-app\node_modules\core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
++ react-dom@16.12.0
++ react-scripts@3.2.0
++ react@16.12.0
+added 1483 packages from 695 contributors and audited 904941 packages in 377.184s
+found 0 vulnerabilities
+
+
+Initialized a git repository.
+
+Success! Created my-app at C:\Users\JS ITBC\Desktop\react\my-app
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd my-app
+  npm start
+
+Happy hacking!
+PS C:\Users\JS ITBC\Desktop\react> cd my-app
+PS C:\Users\JS ITBC\Desktop\react\my-app> npm start
+
+> my-app@0.1.0 start C:\Users\JS ITBC\Desktop\react\my-app
+> react-scripts start
+
+Compiled successfully!
+
+You can now view my-app in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://10.0.0.129:3000/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
