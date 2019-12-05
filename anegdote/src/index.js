@@ -1,22 +1,30 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-const Quote = ({ text }) => {
+const Quote = ({ text, points }) => {
     return (
-        <p>{text}</p>
+        <>
+            <p>{text}</p>
+            <p>has {points} points</p>
+        </>
     )
 }
 const App = ({ quotes }) => {
     const [index, setIndex] = useState(4)
+    const [points, setPoints] = useState((new Array(quotes.length)).fill(0))
 
     return (
         //<button onClick={() => setIndex(Math.floor(Math.random() * quotes.length))}>Change</button>
-
+        //{quotes.map((quote, index) => (<Quote key={index} text={quote}></Quote>))}
         //quotes.map((quote,index)=>(<p key={index}>{quote}</p>))  //ispisuje sve paragrafe u razlicitom redu
         <>
-            <Quote text={quotes[index]} />
-            {quotes.map((quote,index)=>(<Quote key={index}text={quote}></Quote>))}
+            <Quote text={quotes[index]} points={points[index]} />
+
+
+
             <button onClick={() => setIndex(Math.floor(Math.random() * quotes.length))}>Change</button>
+            <button onClick={() => { let x = [...points]; x[index]++;console.log(x); setPoints(x); }}>Vote</button>
             
+
         </>
 
     )
@@ -43,3 +51,5 @@ ReactDOM.render(
     <App quotes={anecdotes} />,
     document.getElementById('root')
 )
+console.log(anecdotes)
+console.log(Quote)
