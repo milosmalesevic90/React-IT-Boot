@@ -1,4 +1,5 @@
 import React from 'react';
+import { Progress } from 'react-sweet-progress';
 
 const Hero = ({ data: { first_name: name,
     last_name: l_name,
@@ -16,9 +17,11 @@ const Hero = ({ data: { first_name: name,
             <label>{race1}</label>
             <ul>
                 <li>Age: {age1}</li>
-                <li>Stamina: {s}</li>
-                <li>Strenight: {pow}</li>
-                <li>Dextrity: {dex}</li>
+                <li>Stamina:<Progress percent={s}/></li>
+                
+                <li>Strenight:<Progress percent={pow} /></li>
+                <li>Dextrity:<Progress percent={dex}/></li>
+                
             </ul>
 
         </li>

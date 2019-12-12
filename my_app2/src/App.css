@@ -49,9 +49,10 @@ ul {
   list-style: none outside none;
   margin: 0;
   padding: 0;
+  font-family: 'Kalam', cursive;
 }
 ul li {
-  background-color:transparent 50% gray ;
+  background-color: gray ;
   
   margin: 5px;
   float: left;
