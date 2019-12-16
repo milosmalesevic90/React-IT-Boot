@@ -1,25 +1,60 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
+import Highscore from './components/Highscore';
+import Register from './components/Register';
+import Profile from './components/Profile';
+import Login from './components/Login';
 
-function App() {
+
+const App = () => {
+  let scores = [
+    {
+      score_id: 0,
+      user_id: 0,
+      game: 0,
+      score: 123
+    },
+    {
+      score_id: 1,
+      user_id: 0,
+      game: 0,
+      score: 150
+    },
+    {
+      score_id: 2,
+      user_id: 0,
+      game: 0,
+      score: 10
+    }
+  ];
+
+  let user = 
+    {
+      user_id:1,
+      name: "mirko",
+      lastname: "miric",
+      username: "mirkow123",
+      email: "kahsdf@gmail.com",
+      picture: null
+    }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header logedIn={true} />
+      <hr />
+      <Highscore scores={scores} />
+      <hr />
+      <Register />
+      <hr />
+      <Profile user={user} />
+      <hr />
+      <Login/>
+      <hr/>
+      <Footer />
+      <hr></hr>
+
+    </>
   );
 }
 
