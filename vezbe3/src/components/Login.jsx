@@ -1,13 +1,43 @@
-import React from "react"
+import React, { useState } from 'react';
+import { login } from '../util/coetus-service';
+import {withRouter} from 'react-router-dom'
 
-const Login =()=>{
+
+const Login = ({setUser,history}) => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    function handleSubmit(){
+        login({email,password})
+        .then(data =>  {
+            if(data.success) {
+                setUser(data.user)
+                history.push('/memory-game')
+            }
+            else console.log('Nije ulogovan')
+        })
+
+
+    }
+
     return (
-        <>
-        <h3>Login</h3>
-        <input type="email" placeholder="Email" required></input>
-        <input type="password" placeholder="Password" required></input><br/>
-        <input type="submit" value="Login" onClick={()=>{}}/>
-        </>
+        <form>
+            <input type="email" placeholder="Email" required onInput={e => {
+                setEmail(e.target.value)
+            }}/>
+            <input type="password" placeholder="Шифра" required onInput={e => {
+                setPassword(e.target.value)
+            } }/>
+            <input type="submit" value="Улогуј се" onClick={(e) => {
+                e.preventDefault()
+                handleSubmit()
+            }} />
+        </form>
     )
 }
-export default Login
+
+export default withRouter(Login)
+
+
+
+

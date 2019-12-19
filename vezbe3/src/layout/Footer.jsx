@@ -1,15 +1,16 @@
-import React from "react"
+import  React  from "react"
+import Logo from "../components/Logo"
 
-const Footer =()=>{
-    return(
+const Footer = (props) => {
+    return (
         <footer>
             <p className="company-desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ex velit dolor tempore ducimus saepe commodi minima ea quae id voluptatum voluptates quam odit doloribus illum natus nam, eligendi eaque?
-
+                Најјача компанија на свету
             </p>
-            <p>&copy;Milos</p>
+            <p>&copy; Ја</p>
+            <Logo />
         </footer>
-
     )
 }
+
 export default Footer

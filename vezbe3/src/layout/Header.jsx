@@ -1,28 +1,31 @@
-import React from "react"
+import  React  from "react"
 import Logo from "../components/Logo"
+import { Link } from 'react-router-dom'
 
-const Header = ({ logedIn }) => {
-    if (logedIn) {
-        return (
+const Header = ({ logedIn, setUser }) => {
+
+    if(logedIn){
+        return(
             <header>
-                <h1>Gejmer</h1>
                 <Logo />
-                <button>Logout</button>
+                <h1>Гејмер</h1>
+                <Link to ='/profile'><img src=''alt='Profile'/></Link>
+
+                <button onClick={() => setUser()}>Одјави се</button>
             </header>
         )
-
-
     }
-    // moze else{} da stoji
-    return (
-        <header>
-            <h1>Gejmer</h1>
-            <Logo />
-            <button>Register</button>
-            <button>LogIn</button>
+    else {
+        return (
+            <header>
+                <Logo />
+                <h1>Гејмер</h1>
 
-        </header>
-    )
+                <Link to='/register'><button>Регистрација</button></Link>
+                <Link to='/login'><button>Пријави се</button></Link>
+            </header>
+        )
+    }
 }
 
 export default Header

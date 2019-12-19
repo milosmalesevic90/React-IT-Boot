@@ -1,12 +1,11 @@
-import React from "react"
+import  React  from "react"
 
-const Logo=()=>{
+const Logo = () => {
     return(
         <>
-        <img src='' alt=""/>
-        
+            <img src='' alt='logo platforme' />
         </>
     )
 }
-export default Logo
 
+export default Logo
