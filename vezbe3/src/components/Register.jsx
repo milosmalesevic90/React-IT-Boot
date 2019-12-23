@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { register } from '../util/coetus-service';
 
-const Register = (setUser) => {
+const Register = ({setUser,history}) => {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
     const [username, setUsername] = useState('')
@@ -11,7 +11,7 @@ const Register = (setUser) => {
     const [validPw, setValidPw] = useState(false)
     const [isSame, setIsSame] = useState(false)
 
-    useEffect(() =>{
+    useEffect(() => {
         function isValidPw(){
             if((/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g).test(password)){
                 setValidPw(true)
@@ -29,42 +29,45 @@ const Register = (setUser) => {
         console.log(pwConfirm === password)
     },[pwConfirm,password])
 
-    function handleSub(){
+    function handleSubmit(){
+        if(!validPw || !isSame)
+            return
         register({name,surname,username,email,password})
-        .then(data=>{ 
-           console.log(data)
+        .then(data =>  {
+            if(data.success) {
+                setUser(data.user)
+                history.push('/memory-game')
+            }
+            else console.log('Неуспешна регистрација')
         })
+
+
     }
 
     return (
         <form>
             <input type="text" placeholder="Име" required onInput={e => {
                 setName(e.target.value)
-            }}/>
+            }}/><br/>
             <input type="text" placeholder="Презиме" required onInput={e => {
                 setSurname(e.target.value)
-            }}/>
+            }}/><br/>
 
             <input type="text" placeholder="Корисничко име" required onInput={e => {
                 setUsername(e.target.value)
-            }}/>  
+            }}/>  <br/>
             <input type="email" placeholder="Email" required onInput={e => {
                 setEmail(e.target.value)
-            }}/>
+            }}/><br/>
             <input type="password" placeholder="Шифра" required onInput={e => {
                 setPassword(e.target.value)
-                
-                //TODO: check same password (idiot proofing)
-            } }/>
+            } }/><br/>
             <input type="password" placeholder="Потврди шифру" required onInput={e => {
                 setPwConfirm(e.target.value)
-            }} />
+            }} /><br/>
                 
 
-            <input type="submit" value="Региструј се" onClick={(e) => {
-                e.preventDefault()
-                handleSub()
-            }} />
+            <input type="submit" value="Региструј се" onClick={e => {e.preventDefault();handleSubmit()}} />
         </form>
     )
 }

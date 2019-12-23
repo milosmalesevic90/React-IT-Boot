@@ -1,33 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Score from './Score';
+import { getScores } from '../util/coetus-service';
 
 const Highscore = (props) => {
 
-    let scores = [
-        {
-          score_id: 0,
-          user_id: 0,
-          game: 0,
-          score: 100
-        },
-        {
-          score_id: 1,
-          user_id: 1,
-          game: 0,
-          score: 10
-        },
-        {
-          score_id: 2,
-          user_id: 0,
-          game: 1,
-          score: 80
-        },
-      ]
+  const [scores,setScores] = useState([])
+
+  useEffect(() => {
+    getScores()
+    .then(data => {
+        setScores(data.data)
+    })
+  },[])
+
+  
+
 
     return (
         <ol>
-            {scores.map((score) => {
-                return <Score key={score.score_id} score={score}/>
+            {scores.sort((b,a) => {
+              return a.score - b.score
+            }).slice(0,10).map((score) => {
+                return <Score key={score.score_id} score={score.score} userID={score.user_id}/>
             })}
         </ol>
     )

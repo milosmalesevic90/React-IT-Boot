@@ -3,7 +3,7 @@ import Logo from "../components/Logo"
 
 const Footer = (props) => {
     return (
-        <footer>
+        <footer className='footer'>
             <p className="company-desc">
                 Најјача компанија на свету
             </p>

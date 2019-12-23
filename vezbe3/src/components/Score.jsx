@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { getUsername } from '../util/coetus-service';
 
-const Score = ({score}) => {
-    // TODO Dohvatanje username-a na osnovu user_id
-    // let user = getUsername(score.user_id).then(flkkd)
+const Score = ({score, userID}) => {
+    const [user,setUser] = useState('')
 
-    let user = "Михаил"
+    useEffect(() => {
+        getUsername(userID)
+        .then(data => {
+            if(data.success === false){
+                return
+            }
+            setUser(data.user.username)
+        })},[userID])
+
     return (
-        <li>{score.score} {user}</li>
+        <li>{score} {user}</li>
     )
 }
 

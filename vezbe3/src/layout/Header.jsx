@@ -1,31 +1,42 @@
 import  React  from "react"
 import Logo from "../components/Logo"
-import { Link } from 'react-router-dom'
+import { Link,withRouter } from 'react-router-dom'
 
-const Header = ({ logedIn, setUser }) => {
+const Header = ({ logedIn, setUser,history,user }) => {
 
     if(logedIn){
         return(
             <header>
-                <Logo />
-                <h1>Гејмер</h1>
-                <Link to ='/profile'><img src=''alt='Profile'/></Link>
 
-                <button onClick={() => setUser()}>Одјави се</button>
+                <nav>
+                    <Link to='/'><Logo /></Link>
+                    <hr />
+                    <div className='nav-items'>
+                    <Link to='/profile'>{user.username}</Link>
+                    <Link to='/'><button className='header-btn' id="logout-btn" onClick={() => setUser()}>Одјави се</button></Link>
+                    <Link to='/memory-game'><button className='header-btn'>Игре меморије</button></Link>
+                    </div>
+                </nav>
+                
             </header>
         )
     }
     else {
         return (
-            <header>
-                <Logo />
-                <h1>Гејмер</h1>
-
-                <Link to='/register'><button>Регистрација</button></Link>
-                <Link to='/login'><button>Пријави се</button></Link>
+            <header className='header'>
+                <nav>
+                    <Link to='/'><Logo /></Link>
+                    <hr />
+                    <div className='nav-items'>
+                    <Link to='/register'><button className='header-btn'>Регистрација</button></Link>
+                    <Link to='/login'><button className='header-btn'>Пријави се</button></Link>
+                    </div>
+                </nav>
+                
+                
             </header>
         )
     }
 }
 
-export default Header
+export default withRouter(Header)

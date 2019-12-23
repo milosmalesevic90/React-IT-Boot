@@ -1,14 +1,13 @@
 import React from 'react';
 
 const Profile = ({ user }) => {
-    
 
     return(
         <>
-            <p>{user.name}</p>
-            <p>{user.surname}</p>
-            <p>{user.username}</p>
-            <p>{user.email}</p>
+            <p><strong>Име</strong>:   {user.name}</p>
+            <p><strong>Презиме</strong>:   {user.surname}</p>
+            <p><strong>Корисничко име</strong>:   {user.username}</p>
+            <p><strong>E-mail</strong>:   {user.email}</p>
             <img src={user.picture ? user.picture : ''} alt="user-avatar" />
         </>
     )

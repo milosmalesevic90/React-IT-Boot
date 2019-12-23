@@ -6,15 +6,17 @@ import Login from '../components/Login';
 import Profile from '../components/Profile';
 import MemoryGame from '../games/MemoryGame';
 
-const Content = ({ setUser, user }) => {
-    return (
+const Content = ({ setUser,user }) => {
+    return(
+        <main className='main'>
         <Switch>
             <Route exact path='/' component={Highscore} />
-            <Route path='/register' component={Register} />
-            <Route path='/login' component={(props) => <Login setUser={setUser} {...props} />} />
-            <Route path='/profile' component={() => <Profile user={user} />} />
-            <Route path='/memory-game' component={MemoryGame} />
+            <Route path='/register' component={(props) => <Register setUser={setUser} {...props}/>} />
+            <Route path='/login' component={(props) => <Login setUser={setUser} {...props}/>} />
+            <Route path='/profile' component={() => <Profile  user={user}/>} />
+            <Route path='/memory-game' component={() => <MemoryGame user={user} />} />
         </Switch>
+        </main>
     )
 }
 
