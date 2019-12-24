@@ -13,9 +13,10 @@ const Login = ({setUser,history})=>{
     function handleSubmit(){
         login({username,password}).then(data=>{
             if(data.success){
-               // setUser(data.user)
+                setUser(data.user)
               // history.push('/profile')
-               console.log(data)
+              console.log(data)
+               
             }
             else console.log('Nije ulogovan')
         })

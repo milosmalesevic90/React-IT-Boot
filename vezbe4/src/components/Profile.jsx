@@ -1,9 +1,20 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { userInfo } from '../utility/forum-services'
 
 
 const Profile = ({user}) => {
-
+    //const[user,setUser]=useState([])
+//
+    //useEffect(()=>{
+    //    userInfo()
+    //    .then(data=>{
+    //        setUser(data.user)
+    //        console.log(data)
+    //    })
+    //},[])
     return (
         <>
             <p><strong>Name</strong>: {user.name}</p>

@@ -8,15 +8,14 @@ import Content from './layout/Content';
 import { Router } from 'react-router-dom';
 
 function App() {
-  const[user,setUser]=useState()
+  const [user, setUser] = useState({})
   return (
     <>
+      <Register setUser={setUser} user={user}/>
+      <hr />
+      <Content setUser={setUser} user={user} />
       
-     <Login/><hr/>
-     <Register></Register>
-     <hr/>
-     <Content setUser={setUser} user={user}/>
-     
+
     </>
   )
 }

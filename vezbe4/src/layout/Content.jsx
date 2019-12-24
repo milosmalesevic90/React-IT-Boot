@@ -2,6 +2,8 @@ import React from 'react'
 import {Switch,Route, Router} from 'react-router-dom'
 import Profile from '../components/Profile'
 import Login from '../components/Login'
+import TopicList from '../components/TopicList'
+import NewTopic from '../components/NewTopic'
 
 
 
@@ -9,12 +11,17 @@ import Login from '../components/Login'
 
 
 
-const Content =(setUser,user)=>{
+const Content =({setUser,user})=>{
+
     return(
         <main className='main'>
          
-               <Login setUser={setUser}/>
-               <Profile user={user}/>
+               <Login setUser={setUser} user={user}/>
+               <Profile setUser={setUser} user={user}/>
+               <hr/>
+               <TopicList setUser={setUser} user={user}/>
+               <hr/>
+               <NewTopic setUser={setUser} user={user}/>
           
 
             
