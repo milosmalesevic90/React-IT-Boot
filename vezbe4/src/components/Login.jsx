@@ -20,20 +20,23 @@ const Login = ({setUser,history})=>{
             }
             else console.log('Nije ulogovan')
         })
-        
-        
+        setPassword('')
+        setUsername('')
+       
     }
     return(
         <form>
-            <input type ="username" placeholder="Username" required onInput={e=>{
-                setUsername(e.target.value)
+            <input type ="username" value={username} placeholder="Username" required onInput={e=>{
+                setUsername(e.target.value);
             }}/><br/>
-            <input type="password" placeholder="Password" required onInput={e=>{
+            <input type="password" value={password} placeholder="Password" required onInput={e=>{
                 setPassword(e.target.value)
             }}/><br/>
             <input type="submit" value="Login" onClick={(e)=>{
                 e.preventDefault()
+
                 handleSubmit()
+                
             }}/>
         </form>
 
