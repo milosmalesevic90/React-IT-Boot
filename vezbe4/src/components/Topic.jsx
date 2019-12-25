@@ -28,6 +28,7 @@ const Topic = ({ match, user:{username} }) => {
   }, [TopicID]);
 
   return (
+      <>
     <form className="postojecaTema">
       <h3>Dodaj odgovor na temu.</h3>
       <div className="poruke">
@@ -60,6 +61,7 @@ const Topic = ({ match, user:{username} }) => {
         }}
       />
     </form>
+    </>
   );
 };
 export default Topic;

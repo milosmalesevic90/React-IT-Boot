@@ -20,6 +20,7 @@ const TopicList=({history})=>{
             setTopics(data.topics)
         })
     },[]) 
+    
     return (
         <main className='topiclist'>
         <h2>Topics List</h2>
