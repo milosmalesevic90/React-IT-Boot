@@ -8,4 +8,4 @@ const GameList = ({ games }) => {
     )
 }
 
-export default GameList
+export default GameList 
