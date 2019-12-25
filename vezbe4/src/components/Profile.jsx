@@ -16,13 +16,13 @@ const Profile = ({user}) => {
     //    })
     //},[])
     return (
-        <>
-            <p><strong>Name</strong>: {user.name}</p>
-            <p><strong>Surname</strong>: {user.surname}</p>
-            <p><strong>Username</strong>: {user.username}</p>
-            <p><strong>E-mail</strong>: {user.email}</p>
+        <div className='profilediv'>
+            <p><strong>Name     </strong>: {user.name}</p>
+            <p><strong>Surname  </strong>: {user.surname}</p>
+            <p><strong>Username </strong>: {user.username}</p>
+            <p><strong>E-mail   </strong>: {user.email}</p>
             <img src={user.picture ? user.picture:''} alt="user-avatar"/>
-        </>
+        </div>
 
     )
 }

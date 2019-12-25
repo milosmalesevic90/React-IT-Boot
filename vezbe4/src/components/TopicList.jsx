@@ -1,11 +1,18 @@
 import React, { useEffect } from 'react';
-import { allTopic } from '../utility/forum-services';
+import { allTopic,cleanDate } from '../utility/forum-services';
 import { useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 
 
-const TopicList=()=>{
+const TopicList=({history})=>{
     const[topics,setTopics]=useState([])
+    function time(s) {
+        return new Date(s * 1e3).toLocaleTimeString().slice(-13, -5);
+
+        
+    }
+    
 
     useEffect(()=>{
         allTopic()
@@ -14,14 +21,14 @@ const TopicList=()=>{
         })
     },[]) 
     return (
-        <>
+        <main className='topiclist'>
         <h2>Topics List</h2>
-        <ul>
-            {topics.map(topic => <li>{topic.title}</li> )}
+        <ol className="gradient-list">
+    {topics.map(topic => <li onClick = {()=> history.push(`/topic/${topic.topic_id}`)} >{topic.title} {new Date(topic.timestamp).toLocaleTimeString("en-US")}</li> )}
 
-        </ul>
-        </>
+        </ol>
+        </main>
     )
 }
 
-export default TopicList
+export default withRouter(TopicList)

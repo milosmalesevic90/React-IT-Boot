@@ -4,6 +4,8 @@ import Profile from '../components/Profile'
 import Login from '../components/Login'
 import TopicList from '../components/TopicList'
 import NewTopic from '../components/NewTopic'
+import Register from '../components/Register'
+import Topic from '../components/Topic'
 
 
 
@@ -11,17 +13,21 @@ import NewTopic from '../components/NewTopic'
 
 
 
-const Content =({setUser,user})=>{
+const Content =({setUser,user,})=>{
 
     return(
         <main className='main'>
          
-               <Login setUser={setUser} user={user}/>
-               <Profile setUser={setUser} user={user}/>
-               <hr/>
-               <TopicList setUser={setUser} user={user}/>
-               <hr/>
-               <NewTopic setUser={setUser} user={user}/>
+               <Switch>
+                   <Route exact path='/' component={TopicList}/>
+                   <Route path='/newtopic' component={()=><NewTopic user={user}/> }/>
+                   <Route path='/register'component={(props)=> <Register setUser={setUser}{...props}/>}/>
+                   <Route path='/login' component={(props) => <Login setUser={setUser} {...props}/>} />
+                   <Route path='/profile' component={() => <Profile  user={user}/>} />
+                   
+                   <Route path='/topic/:topic_id' component={(props)=><Topic user={user} {...props}/>}/>
+                   
+               </Switch>
           
 
             

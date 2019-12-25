@@ -14,7 +14,7 @@ const Login = ({setUser,history})=>{
         login({username,password}).then(data=>{
             if(data.success){
                 setUser(data.user)
-              // history.push('/profile')
+               history.push('/')
               console.log(data)
                
             }
@@ -44,4 +44,4 @@ const Login = ({setUser,history})=>{
     )
 }
 
-export default Login
+export default withRouter(Login) 

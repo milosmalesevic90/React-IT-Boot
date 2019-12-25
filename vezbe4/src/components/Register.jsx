@@ -39,26 +39,32 @@ const Register =({setUser,history})=>{
                 console.log(data)
             }
         })
+        setName('')
+        setSurname('')
+        setUsername('')
+        setEmail('')
+        setPassword('')
+        setConfirmPW('')
     }
 
     return(
         <form>
-            <input type="text" placeholder="Name" required onInput={e=>{
+            <input type="text" placeholder="Name" value={name} required onInput={e=>{
                 setName(e.target.value)
             }}/><br/>
-            <input type="text" placeholder="Surname" required onInput={e=>{
+            <input type="text" placeholder="Surname" value={surname} required onInput={e=>{
                 setSurname(e.target.value)
             }}/><br/>
-            <input type="text" placeholder="Username" required onInput={e=>{
+            <input type="text" placeholder="Username" value={username} required onInput={e=>{
                 setUsername(e.target.value)
             }}/><br/>
-            <input type="email" placeholder="Email" required onInput={e=>{
+            <input type="email" placeholder="Email" value={email} required onInput={e=>{
                 setEmail(e.target.value)
             }}/><br/>
-            <input type="password" placeholder="Password" required onInput={e=>{
+            <input type="password" placeholder="Password" value={password} required onInput={e=>{
                 setPassword(e.target.value)
             }}/><br/>
-            <input type="password" placeholder="Confirm Password" required onInput={e=>{
+            <input type="password" placeholder="Confirm Password" value={confirmPW} required onInput={e=>{
                 setConfirmPW(e.target.value)
             }}/><br/>
 

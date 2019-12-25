@@ -19,17 +19,21 @@ const NewTopic = ({user})=>{
         }
         
         )
+        setTopic('')
+        setMessage('')
     }
 
     
 
     return(
+        <>
+        <h2>ADD TOPIC</h2>
         <form>
-            <input type="text" placeholder="New Topic" required onInput={e=>{
+            <input type="text" placeholder="New Topic" value={topic} required onInput={e=>{
                 setTopic(e.target.value)
             }}/>
             <br/>
-            <input type="text" placeholder="First Message for Topic" required onInput={e=>{
+            <input type="text" placeholder="First Message for Topic" value={message} required onInput={e=>{
                 setMessage(e.target.value)
             }}/>
             <br/>
@@ -40,6 +44,7 @@ const NewTopic = ({user})=>{
 
 
         </form>
+        </>
     )
 }
 
