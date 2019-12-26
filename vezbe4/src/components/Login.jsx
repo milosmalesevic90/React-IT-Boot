@@ -26,9 +26,13 @@ const Login = ({setUser,history})=>{
     }
     return(
         <form>
+            <p>Username</p>
+            <br/>
             <input type ="username" value={username} placeholder="Username" required onInput={e=>{
                 setUsername(e.target.value);
             }}/><br/>
+            <p>Password</p>
+            <br/>
             <input type="password" value={password} placeholder="Password" required onInput={e=>{
                 setPassword(e.target.value)
             }}/><br/>

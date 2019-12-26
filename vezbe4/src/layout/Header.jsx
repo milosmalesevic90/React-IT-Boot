@@ -7,7 +7,7 @@ const Header = ({ logedIn, setUser, history, user }) => {
         return (
             <header>
                 <nav>
-                <Link to='/'>HOME</Link>
+                <h1><Link to='/'>HOME</Link></h1>
                     <hr />
                     <div className='nav-item'>
                         <Link className='profil' to='/profile'>Welcome : {user.username}</Link><br/>
@@ -27,7 +27,7 @@ const Header = ({ logedIn, setUser, history, user }) => {
                     <div className='nav-items'>
                         <Link to='/register'><button className='header-btn'>Register</button></Link>
                         <Link to='/login'><button className='header-btn'>Login</button></Link>
-                        <Link to='/newtopic'><button className='header-btn'>New Topic</button></Link>
+                        
                     </div>
                 </nav>
             </header>

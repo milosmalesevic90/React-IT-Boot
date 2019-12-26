@@ -30,19 +30,19 @@ const Topic = ({ match, user:{username} }) => {
   return (
       <>
     <form className="postojecaTema">
-      <h3>Dodaj odgovor na temu.</h3>
+      <h3>Topic Messages</h3>
       <div className="poruke">
-        <h3>Pogledajte postojeće poruke:</h3>
+        <h3>Topic Messages:</h3>
         <ul>
           {messages.map(message => (
-            <li>{message.message}</li>
+            <li>{message.message.toString()}</li>
           ))}
         </ul>
       </div>
       <input
         className="input-nova-poruka"
         type="text"
-        placeholder="nova poruka"
+        placeholder="New message"
         value={message}
         required
         onInput={e => {
@@ -54,7 +54,7 @@ const Topic = ({ match, user:{username} }) => {
       <input
         className="dugme"
         type="submit"
-        value="Pošalji"
+        value="SEND"
         onClick={e => {
           e.preventDefault();
           handleSubmit();

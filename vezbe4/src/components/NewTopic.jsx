@@ -2,9 +2,10 @@ import React from 'react'
 import { useState } from 'react'
 import { newTopic } from '../utility/forum-services'
 import { topicMessage } from '../utility/forum-services'
+import { withRouter } from 'react-router-dom'
 
 
-const NewTopic = ({user})=>{
+const NewTopic = ({user,history})=>{
     const[topic,setTopic]=useState('')
     const[message,setMessage]=useState('')
 
@@ -14,6 +15,7 @@ const NewTopic = ({user})=>{
             if(data.success){
                 console.log(data)
                 topicMessage(user.username,data.topic.topic_id,message)
+                history.push('/')
             }
             
         }
@@ -48,4 +50,4 @@ const NewTopic = ({user})=>{
     )
 }
 
-export default NewTopic
+export default withRouter(NewTopic)

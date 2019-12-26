@@ -22,13 +22,16 @@ const TopicList=({history})=>{
     },[]) 
     
     return (
+        <>
+        <h1>Topics</h1>
         <main className='topiclist'>
-        <h2>Topics List</h2>
+        <h3>Topics List</h3>
         <ol className="gradient-list">
-    {topics.map(topic => <li onClick = {()=> history.push(`/topic/${topic.topic_id}`)} >{topic.title} {new Date(topic.timestamp).toLocaleTimeString("en-US")}</li> )}
+    {topics.map(topic => <li onClick = {()=> history.push(`/topic/${topic.topic_id}`)} >{topic.title.toString()} {new Date(topic.timestamp).toLocaleTimeString("en-US")}</li> )}
 
         </ol>
         </main>
+        </>
     )
 }
 

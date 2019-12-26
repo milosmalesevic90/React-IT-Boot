@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.scss';
+import './App.css';
 import Login from './components/Login';
-
+//import 'terminal.css'
 import Profile from './components/Profile';
 import Content from './layout/Content';
 import { BrowserRouter as Router } from 'react-router-dom'
